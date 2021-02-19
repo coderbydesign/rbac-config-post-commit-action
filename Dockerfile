@@ -9,6 +9,7 @@ RUN install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 # RUN ls -la
 # COPY configs/permissions/* /configs/permissions/
 # COPY configs/roles/* /configs/roles/
+RUN yum install git -y
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
