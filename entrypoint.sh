@@ -28,5 +28,5 @@ git checkout ${BRANCH_NAME}
 git add .
 timestamp=$(date -u)
 git commit -m "[GitHub] - Automated config conversion: ${timestamp} ${GITHUB_SHA}" || exit 0
-git pull --rebase publisher ${BRANCH_NAME}
+git pull --rebase ${BRANCH_NAME}
 git push origin ${BRANCH_NAME}
